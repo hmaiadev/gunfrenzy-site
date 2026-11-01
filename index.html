@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Gun Frenzy — Arena shooter multiplayer 2D</title>
-  <meta name="description" content="Gun Frenzy é um arena shooter multiplayer em 2D com movimento explosivo, tiroteio com projéteis reais e partidas rápidas. Em desenvolvimento na Unreal Engine 5.8.">
+  <title data-i18n="meta_title">Gun Frenzy — 2D multiplayer arena shooter</title>
+  <meta name="description" content="Gun Frenzy is a 2D multiplayer arena shooter with explosive movement, real projectile gunplay and fast matches. In development on Unreal Engine 5.8." data-i18n="meta_desc" data-i18n-attr="content">
   <meta name="theme-color" content="#0b0c0f">
-  <meta property="og:title" content="Gun Frenzy — Arena shooter multiplayer 2D">
-  <meta property="og:description" content="Pule, gire, mire em 360° e domine a arena. Em desenvolvimento.">
+  <meta property="og:title" content="Gun Frenzy — 2D multiplayer arena shooter">
+  <meta property="og:description" content="Jump, flip, aim in 360° and own the arena. In development.">
   <meta property="og:image" content="assets/cover.jpg">
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/favicon.png">
@@ -16,26 +16,38 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,700;1,800;1,900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/site.css">
+  <script src="js/i18n.js" defer></script>
   <script src="js/site.js" defer></script>
 </head>
 <body>
 
 <header class="nav" id="top">
-  <a class="brand" href="#top" aria-label="Gun Frenzy, início">
+  <a class="brand" href="#top" aria-label="Gun Frenzy, home">
     <img src="assets/icon-192.png" alt="" width="36" height="36">
     <span>GUN<b>FRENZY</b></span>
   </a>
-  <nav class="nav-links" aria-label="Seções">
-    <a href="#jogo">O jogo</a>
-    <a href="#mecanicas">Mecânicas</a>
-    <a href="#arsenal">Arsenal</a>
-    <a href="#gameplay">Gameplay</a>
-    <a href="#status">Status</a>
-    <a href="updates.html">Updates</a>
+  <nav class="nav-links" aria-label="Sections">
+    <a href="#jogo" data-i18n="nav_game">The game</a>
+    <a href="#mecanicas" data-i18n="nav_mech">Mechanics</a>
+    <a href="#arsenal" data-i18n="nav_arsenal">Arsenal</a>
+    <a href="#gameplay" data-i18n="nav_gameplay">Gameplay</a>
+    <a href="#status" data-i18n="nav_status">Status</a>
+    <a href="updates.html" data-i18n="nav_updates">Updates</a>
   </nav>
-  <a class="nav-dev" href="https://discord.gg/s9eRyuffNB" target="_blank" rel="noopener" title="Be a playtester no Discord">
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" class="lang-btn" data-lang="en" aria-pressed="true" title="English">
+      <svg viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#012169"/><path d="M0 0l24 16M24 0L0 16" stroke="#fff" stroke-width="3"/><path d="M0 0l24 16M24 0L0 16" stroke="#C8102E" stroke-width="1.4"/><path d="M12 0v16M0 8h24" stroke="#fff" stroke-width="5"/><path d="M12 0v16M0 8h24" stroke="#C8102E" stroke-width="2.6"/></svg>
+    </button>
+    <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false" title="Português (Brasil)">
+      <svg viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#009B3A"/><path d="M12 2l10 6-10 6L2 8z" fill="#FEDF00"/><circle cx="12" cy="8" r="3.2" fill="#002776"/></svg>
+    </button>
+    <button type="button" class="lang-btn" data-lang="es" aria-pressed="false" title="Español">
+      <svg viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#AA151B"/><rect y="4" width="24" height="8" fill="#F1BF00"/></svg>
+    </button>
+  </div>
+  <a class="nav-dev" href="https://discord.gg/s9eRyuffNB" target="_blank" rel="noopener" title="Be a playtester on Discord">
     <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7L8 5Z"/></svg>
-    <span>Playtest</span>
+    <span data-i18n="nav_playtest">Playtest</span>
   </a>
 </header>
 
@@ -45,182 +57,182 @@
     <picture class="hero-art">
       <source media="(max-width: 700px)" srcset="assets/cover-800.webp" type="image/webp">
       <source srcset="assets/cover.webp" type="image/webp">
-      <img src="assets/cover.jpg" alt="Arte de capa de Gun Frenzy com três combatentes e o logotipo do jogo" width="1200" height="675" fetchpriority="high">
+      <img src="assets/cover.jpg" alt="Gun Frenzy cover art with three fighters and the game logo" width="1200" height="675" fetchpriority="high">
     </picture>
     <div class="hero-shade" aria-hidden="true"></div>
     <div class="hero-copy">
-      <p class="kicker"><span class="dot" aria-hidden="true"></span> Em desenvolvimento · PC</p>
-      <h1>Entre na arena.<br><em>Saia como lenda.</em></h1>
-      <p class="lede">Um arena shooter multiplayer em 2D onde cada pulo, giro e disparo conta. Movimento explosivo, projéteis reais e partidas rápidas contra jogadores e bots.</p>
+      <p class="kicker"><span class="dot" aria-hidden="true"></span> <span data-i18n="hero_kicker">In development · PC</span></p>
+      <h1 data-i18n="hero_title">Enter the arena.<br><em>Leave as a legend.</em></h1>
+      <p class="lede" data-i18n="hero_lede">A 2D multiplayer arena shooter where every jump, flip and shot counts. Explosive movement, real projectiles and fast matches against players and bots.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="#mecanicas">Ver mecânicas</a>
-        <a class="btn btn-ghost" href="https://discord.gg/s9eRyuffNB" target="_blank" rel="noopener">Be a playtester</a>
+        <a class="btn btn-primary" href="#mecanicas" data-i18n="hero_cta1">See mechanics</a>
+        <a class="btn btn-ghost" href="https://discord.gg/s9eRyuffNB" target="_blank" rel="noopener" data-i18n="hero_cta2">Be a playtester</a>
       </div>
     </div>
   </section>
 
   <!-- PILLARS -->
-  <section class="pillars" id="jogo" aria-label="Pilares do jogo">
+  <section class="pillars" id="jogo" aria-label="Game pillars">
     <article>
       <span class="num">01</span>
-      <h2>Movimento explosivo</h2>
-      <p>Pulo duplo, backflip, wall jump, agachar e deslizar. Cruze a arena pelo ar, troque de lado em meio segundo e escape por cima dos tiros.</p>
+      <h2 data-i18n="p1t">Explosive movement</h2>
+      <p data-i18n="p1d">Double jump, backflip, wall jump, crouch and slide. Cross the arena through the air, switch sides in half a second and escape over the shots.</p>
     </article>
     <article>
       <span class="num">02</span>
-      <h2>Tiroteio de verdade</h2>
-      <p>Cada bala é um projétil físico com velocidade, recuo e dispersão. Mire livremente em 360° com o mouse ou o analógico.</p>
+      <h2 data-i18n="p2t">Real gunplay</h2>
+      <p data-i18n="p2d">Every bullet is a physical projectile with speed, recoil and spread. Aim freely in 360° with mouse or stick.</p>
     </article>
     <article>
       <span class="num">03</span>
-      <h2>Arena online</h2>
-      <p>Servidor autoritativo, placar com bandeiras e bots com personalidades diferentes completando a partida.</p>
+      <h2 data-i18n="p3t">Online arena</h2>
+      <p data-i18n="p3d">Authoritative server, scoreboard with flags and bots with different personalities filling the match.</p>
     </article>
   </section>
 
   <!-- ABOUT -->
   <section class="about">
     <div class="about-text">
-      <p class="eyebrow">O jogo</p>
-      <h2 class="section-title">Ação lateral, combate sem pausa</h2>
-      <p>Gun Frenzy coloca todos os combatentes num mesmo plano de batalha, visto de lado, em cenários 3D com câmera em perspectiva. A leitura é simples como num clássico 2D — esquerda, direita, cima — mas a ação tem a profundidade e o peso de um shooter moderno.</p>
-      <p>Inspirado em <strong>Soldat</strong> e <strong>Worms Rumble</strong>, o foco é o duelo rápido: chegar primeiro na munição, ganhar altura, ler o movimento do adversário e acertar o tiro no ar.</p>
+      <p class="eyebrow" data-i18n="about_eyebrow">The game</p>
+      <h2 class="section-title" data-i18n="about_title">Side-view action, nonstop combat</h2>
+      <p data-i18n="about_p1">Gun Frenzy puts every fighter on the same battle plane, seen from the side, in 3D arenas with a perspective camera. Reading the fight is as simple as a 2D classic — left, right, up — but the action has the depth and weight of a modern shooter.</p>
+      <p data-i18n="about_p2">Inspired by Soldat and Worms Rumble, the focus is the fast duel: reach the ammo first, gain height, read your opponent and land the shot mid-air.</p>
       <ul class="facts">
-        <li><b>Gênero</b><span>Arena shooter multiplayer 2D</span></li>
-        <li><b>Plataforma</b><span>PC (Windows)</span></li>
-        <li><b>Controles</b><span>Teclado e mouse · Gamepad</span></li>
-        <li><b>Engine</b><span>Unreal Engine 5.8</span></li>
+        <li><b data-i18n="f_genre">Genre</b><span data-i18n="f_genre_v">2D multiplayer arena shooter</span></li>
+        <li><b data-i18n="f_platform">Platform</b><span data-i18n="f_platform_v">PC (Windows)</span></li>
+        <li><b data-i18n="f_controls">Controls</b><span data-i18n="f_controls_v">Keyboard &amp; mouse · Gamepad</span></li>
+        <li><b data-i18n="f_engine">Engine</b><span data-i18n="f_engine_v">Unreal Engine 5.8</span></li>
       </ul>
     </div>
     <div class="about-card">
-      <img src="assets/icon-512.png" alt="Emblema de Gun Frenzy" width="512" height="512" loading="lazy">
+      <img src="assets/icon-512.png" alt="Gun Frenzy emblem" width="512" height="512" loading="lazy">
     </div>
   </section>
 
   <!-- MECHANICS -->
   <section class="mechanics" id="mecanicas">
-    <p class="eyebrow">Mecânicas</p>
-    <h2 class="section-title">Tudo que acontece na arena</h2>
+    <p class="eyebrow" data-i18n="mech_eyebrow">Mechanics</p>
+    <h2 class="section-title" data-i18n="mech_title">Everything that happens in the arena</h2>
     <div class="grid">
       <article class="card">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l4 5h-3v5h-2V8H8l4-5Zm-6 12h12v2H6v-2Zm2 4h8v2H8v-2Z"/></svg>
-        <h3>Pulo duplo &amp; backflip</h3>
-        <p>O segundo pulo pode virar um backflip: salte contra a direção da mira e gire para trás ganhando distância.</p>
+        <h3 data-i18n="m1t">Double jump &amp; backflip</h3>
+        <p data-i18n="m1d">The second jump can become a backflip: jump against your aim and spin backwards to gain distance.</p>
       </article>
       <article class="card">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h3v18H3V3Zm6 9 7-7v4h5v6h-5v4l-7-7Z"/></svg>
-        <h3>Wall jump</h3>
-        <p>Encostou na parede? Ela vira trampolim. O impulso lateral tem prioridade e muda o ritmo do combate vertical.</p>
+        <h3 data-i18n="m2t">Wall jump</h3>
+        <p data-i18n="m2d">Touching a wall turns it into a springboard. The sideways impulse takes priority and changes the vertical fight.</p>
       </article>
       <article class="card">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 2h2v4.07A6 6 0 0 1 17.93 11H22v2h-4.07A6 6 0 0 1 13 17.93V22h-2v-4.07A6 6 0 0 1 6.07 13H2v-2h4.07A6 6 0 0 1 11 6.07V2Zm1 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm0 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>
-        <h3>Mira 360°</h3>
-        <p>O personagem segue o cursor: tronco e cabeça acompanham a mira enquanto as pernas continuam correndo.</p>
+        <h3 data-i18n="m3t">360° aim</h3>
+        <p data-i18n="m3d">The character follows the cursor: torso and head track the aim while the legs keep running.</p>
       </article>
       <article class="card">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h7a3 3 0 0 1 3 3v2h1a2 2 0 0 1 2 2v4a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V7a3 3 0 0 1 3-3Z"/></svg>
-        <h3>Agachar &amp; slide</h3>
-        <p>Agache para se proteger ou deslize mantendo o momento — e saia do slide num salto que preserva a velocidade.</p>
+        <h3 data-i18n="m4t">Crouch &amp; slide</h3>
+        <p data-i18n="m4d">Crouch for cover or slide keeping your momentum — and leave the slide in a jump that preserves speed.</p>
       </article>
       <article class="card">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7V3Z"/></svg>
-        <h3>Vida &amp; munição</h3>
-        <p>Pickups flutuantes de cura e munição reaparecem em pontos fixos do mapa. Controlar esses pontos decide partidas.</p>
+        <h3 data-i18n="m5t">Health &amp; ammo</h3>
+        <p data-i18n="m5d">Floating health and ammo pickups respawn at fixed points. Controlling them decides matches.</p>
       </article>
       <article class="card">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2h6v3h3a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-1v4h-2v-4H9v4H7v-4H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h3V2Zm0 8a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm6 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"/></svg>
-        <h3>Bots com personalidade</h3>
-        <p>Defensivos, equilibrados ou agressivos: cada bot tem distância, mira e reação próprias, e também luta entre si.</p>
+        <h3 data-i18n="m6t">Bots with personality</h3>
+        <p data-i18n="m6d">Defensive, balanced or aggressive: each bot has its own distance, aim and reaction time — and fights other bots too.</p>
       </article>
       <article class="card">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h2v18H4V3Zm4 1h11l-2.5 4L19 12H8V4Z"/></svg>
-        <h3>Placar com bandeiras</h3>
-        <p>Kills e mortes de todos na tela, com nome e bandeira de cada combatente. Bots mantêm sua identidade a partida inteira.</p>
+        <h3 data-i18n="m7t">Scoreboard with flags</h3>
+        <p data-i18n="m7d">Kills and deaths for everyone on screen, with each fighter's name and flag. Bots keep their identity for the whole match.</p>
       </article>
       <article class="card">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10l-1 6h3l-8 14 1-9H8L7 2Z"/></svg>
-        <h3>Ragdoll</h3>
-        <p>Quem cai, cai de verdade: o corpo herda a velocidade do último instante e desaba com física.</p>
+        <h3 data-i18n="m8t">Ragdoll</h3>
+        <p data-i18n="m8d">When someone falls, they really fall: the body inherits the last velocity and collapses with physics.</p>
       </article>
     </div>
   </section>
 
   <!-- ARSENAL -->
   <section class="arsenal" id="arsenal">
-    <p class="eyebrow">Arsenal</p>
-    <h2 class="section-title">Escolha seu ritmo de fogo</h2>
+    <p class="eyebrow" data-i18n="ars_eyebrow">Arsenal</p>
+    <h2 class="section-title" data-i18n="ars_title">Pick your rate of fire</h2>
     <div class="weapons">
       <article class="weapon">
-        <header><span class="tag">Slot 1</span><h3>Pistola</h3></header>
-        <p>Semiautomática, precisa e confiável. Cada clique é um tiro: ideal para quem acerta no ar.</p>
+        <header><span class="tag" data-i18n="w1tag">Slot 1</span><h3 data-i18n="w1name">Pistol</h3></header>
+        <p data-i18n="w1desc">Semi-automatic, accurate and reliable. One click, one shot: perfect for hitting in the air.</p>
         <dl class="bars">
-          <div><dt>Dano por tiro</dt><dd><i data-v="80"></i></dd></div>
-          <div><dt>Cadência</dt><dd><i data-v="45"></i></dd></div>
-          <div><dt>Carregador</dt><dd><i data-v="35"></i></dd></div>
-          <div><dt>Controle</dt><dd><i data-v="75"></i></dd></div>
+          <div><dt data-i18n="bar_damage">Damage per shot</dt><dd><i data-v="80"></i></dd></div>
+          <div><dt data-i18n="bar_rate">Fire rate</dt><dd><i data-v="45"></i></dd></div>
+          <div><dt data-i18n="bar_mag">Magazine</dt><dd><i data-v="35"></i></dd></div>
+          <div><dt data-i18n="bar_control">Control</dt><dd><i data-v="75"></i></dd></div>
         </dl>
       </article>
       <article class="weapon">
-        <header><span class="tag">Slot 2</span><h3>Rifle</h3></header>
-        <p>Automático e de carregador longo. Segure o gatilho e controle o recuo para dominar a média distância.</p>
+        <header><span class="tag" data-i18n="w2tag">Slot 2</span><h3 data-i18n="w2name">Rifle</h3></header>
+        <p data-i18n="w2desc">Automatic with a long magazine. Hold the trigger and control the recoil to own mid-range.</p>
         <dl class="bars">
-          <div><dt>Dano por tiro</dt><dd><i data-v="45"></i></dd></div>
-          <div><dt>Cadência</dt><dd><i data-v="85"></i></dd></div>
-          <div><dt>Carregador</dt><dd><i data-v="85"></i></dd></div>
-          <div><dt>Controle</dt><dd><i data-v="55"></i></dd></div>
+          <div><dt data-i18n="bar_damage">Damage per shot</dt><dd><i data-v="45"></i></dd></div>
+          <div><dt data-i18n="bar_rate">Fire rate</dt><dd><i data-v="85"></i></dd></div>
+          <div><dt data-i18n="bar_mag">Magazine</dt><dd><i data-v="85"></i></dd></div>
+          <div><dt data-i18n="bar_control">Control</dt><dd><i data-v="55"></i></dd></div>
         </dl>
       </article>
       <article class="weapon weapon-soon">
-        <header><span class="tag">Em breve</span><h3>Novas armas</h3></header>
-        <p>O arsenal foi construído para crescer. Novas armas entram em teste nas próximas versões.</p>
+        <header><span class="tag" data-i18n="wstag">Coming soon</span><h3 data-i18n="wsname">New weapons</h3></header>
+        <p data-i18n="wsdesc">The arsenal was built to grow. New weapons enter testing in upcoming versions.</p>
       </article>
     </div>
   </section>
 
   <!-- GAMEPLAY -->
   <section class="gameplay" id="gameplay">
-    <p class="eyebrow">Gameplay</p>
-    <h2 class="section-title">Direto da arena</h2>
-    <div class="video-slot" data-video="/assets/gameplay/trailer.mp4">
-      <div class="placeholder"><span>Trailer em produção</span></div>
+    <p class="eyebrow" data-i18n="gp_eyebrow">Gameplay</p>
+    <h2 class="section-title" data-i18n="gp_title">Straight from the arena</h2>
+    <div class="video-slot" data-video="assets/gameplay/trailer.mp4">
+      <div class="placeholder"><span data-i18n="gp_trailer">Trailer in production</span></div>
     </div>
     <div class="shots">
-      <figure class="shot" data-src="assets/gameplay/shot-1.jpg"><div class="placeholder"><span>Captura 01</span></div></figure>
-      <figure class="shot" data-src="assets/gameplay/shot-2.jpg"><div class="placeholder"><span>Captura 02</span></div></figure>
-      <figure class="shot" data-src="assets/gameplay/shot-3.jpg"><div class="placeholder"><span>Captura 03</span></div></figure>
-      <figure class="shot" data-src="assets/gameplay/shot-4.jpg"><div class="placeholder"><span>Captura 04</span></div></figure>
+      <figure class="shot" data-src="assets/gameplay/shot-1.jpg"><div class="placeholder"><span><span data-i18n="gp_shot">Shot</span> 01</span></div></figure>
+      <figure class="shot" data-src="assets/gameplay/shot-2.jpg"><div class="placeholder"><span><span data-i18n="gp_shot">Shot</span> 02</span></div></figure>
+      <figure class="shot" data-src="assets/gameplay/shot-3.jpg"><div class="placeholder"><span><span data-i18n="gp_shot">Shot</span> 03</span></div></figure>
+      <figure class="shot" data-src="assets/gameplay/shot-4.jpg"><div class="placeholder"><span><span data-i18n="gp_shot">Shot</span> 04</span></div></figure>
     </div>
   </section>
 
   <!-- STATUS -->
   <section class="status" id="status">
-    <p class="eyebrow">Status</p>
-    <h2 class="section-title">Diário de desenvolvimento</h2>
+    <p class="eyebrow" data-i18n="st_eyebrow">Status</p>
+    <h2 class="section-title" data-i18n="st_title">Development log</h2>
     <ol class="timeline">
-      <li class="done"><b>Combate base</b><span>Movimento, saltos especiais, mira livre, armas com projéteis e recarga.</span></li>
-      <li class="done"><b>Arena viva</b><span>Spawners, bots com perfis, pickups, placar e menu online/offline.</span></li>
-      <li class="done"><b>Mobilidade avançada</b><span>Agachar, slide e slide jump; HUD com vida e slots de arma.</span></li>
-      <li class="now"><b>Polimento</b><span>Áudio, efeitos, ajuste fino das armas e estabilidade do servidor.</span></li>
-      <li><b>Servidores online</b><span>Testes pela internet e partidas com mais jogadores.</span></li>
+      <li class="done"><b data-i18n="st1t">Core combat</b><span data-i18n="st1d">Movement, special jumps, free aim, projectile weapons and reload.</span></li>
+      <li class="done"><b data-i18n="st2t">Living arena</b><span data-i18n="st2d">Spawners, bot profiles, pickups, scoreboard and online/offline menu.</span></li>
+      <li class="done"><b data-i18n="st3t">Advanced mobility</b><span data-i18n="st3d">Crouch, slide and slide jump; HUD with health and weapon slots.</span></li>
+      <li class="now"><b data-i18n="st4t">Polish</b><span data-i18n="st4d">Audio, effects, weapon tuning and server stability.</span></li>
+      <li><b data-i18n="st5t">Online servers</b><span data-i18n="st5d">Internet tests and matches with more players.</span></li>
     </ol>
-    <p class="small"><a href="updates.html">Ver todas as atualizações →</a></p>
+    <p class="small"><a href="updates.html" data-i18n="st_more">See all updates →</a></p>
   </section>
 
   <!-- PLAYTEST CTA -->
   <section class="cta-band" id="playtest">
     <div>
-      <p class="eyebrow">Playtest</p>
-      <h2 class="section-title">Be a playtester</h2>
-      <p>Testes fechados no PC. Entre no Discord para receber as builds, os horários de teste e falar direto com o desenvolvedor.</p>
+      <p class="eyebrow" data-i18n="pt_eyebrow">Playtest</p>
+      <h2 class="section-title" data-i18n="pt_title">Be a playtester</h2>
+      <p data-i18n="pt_text">Closed tests on PC. Join the Discord to get the builds, test times and talk directly to the developer.</p>
     </div>
-    <a class="btn btn-primary" href="https://discord.gg/s9eRyuffNB" target="_blank" rel="noopener">Entrar no Discord</a>
+    <a class="btn btn-primary" href="https://discord.gg/s9eRyuffNB" target="_blank" rel="noopener" data-i18n="pt_btn">Join Discord</a>
   </section>
 </main>
 
 <footer class="footer">
   <div class="footer-brand"><img src="assets/icon-192.png" alt="" width="28" height="28"><span>GUN<b>FRENZY</b></span></div>
-  <p>Jogo em desenvolvimento. Feito com Unreal Engine 5.8. Todo conteúdo sujeito a mudanças.</p>
-  <p class="small">© <span id="year">2026</span> Gun Frenzy · <a href="updates.html">Updates</a> · <a href="https://discord.gg/s9eRyuffNB" target="_blank" rel="noopener">Discord</a></p>
+  <p data-i18n="foot_note">Game in development. Made with Unreal Engine 5.8. All content subject to change.</p>
+  <p class="small"><span data-i18n="foot_rights">© 2026 Gun Frenzy</span> · <a href="updates.html" data-i18n="foot_updates">Updates</a> · <a href="https://discord.gg/s9eRyuffNB" target="_blank" rel="noopener" data-i18n="foot_discord">Discord</a></p>
 </footer>
 
 </body>
