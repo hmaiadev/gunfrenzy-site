@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title data-i18n="up_title">Updates — Gun Frenzy</title>
-  <meta name="description" content="Latest Gun Frenzy builds and development updates.">
+  <meta name="description" content="Gun Frenzy updates: what was added and fixed, in plain language.">
   <meta name="theme-color" content="#0b0c0f">
   <link rel="icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,92 +47,27 @@
 <section class="upd-head">
   <p class="eyebrow" data-i18n="nav_updates">Updates</p>
   <h1 class="section-title" data-i18n="up_h1">What changed in the arena</h1>
-  <p><span data-i18n="up_intro">Packaged builds and development versions, published here with every release. Want to test before everyone else?</span> <a href="https://discord.gg/s9eRyuffNB" target="_blank" rel="noopener">Discord</a>.</p>
+  <p><span data-i18n="up_intro">What was added and fixed, in plain language. Want to test before everyone else?</span> <a href="https://discord.gg/s9eRyuffNB" target="_blank" rel="noopener">Discord</a>.</p>
 </section>
 
 <main class="upd-wrap">
-  <h2 class="section-title" data-i18n="up_builds">Latest builds</h2>
   <div class="upd-list">
       <article class="upd-item">
-        <div class="upd-meta"><span>Build 1708</span><span>01/11 17:09:34</span><span>0.9.15-dev</span><span>Codex</span></div>
-        <p>HUD local e país/bandeira correspondentes; 196 países; menu restaura perfil; oficial e cliente sincronizados</p>
-        <p class="val"><span data-i18n="up_validation">Validation:</span> Cliques reais offline Brazil e oficial 127.0.0.1:7777 com 2 clientes Brazil/United Kingdom; HUD/placar corretos nos dois; F10 restaura; beacon online após saída; sem fatal; tick60 aplicado depois (0.9.16); foco UI/WAN pendentes</p>
-      </article>
-      <article class="upd-item">
-        <div class="upd-meta"><span>Build 1617</span><span>01/11 16:18:53</span><span>0.9.9-dev</span><span>Codex</span></div>
-        <p>minimapa + painel de informações do servidor (`AS2DSCORE` 1x/s com X/Z/vivo)</p>
-        <p class="val"><span data-i18n="up_validation">Validation:</span> log do servidor: posições 1x/s, minimapa verde/vermelho e painel OK; recaptura do mapa feita manualmente (16:28)</p>
-      </article>
-      <article class="upd-item">
-        <div class="upd-meta"><span>Build 1415</span><span>01/11 14:16:56</span><span>0.9.1</span><span>Claude</span></div>
-        <p>L_Boot preto + AS2DBootGameMode; servidor único (mutex/PID); beacon com porta real; menu volta ao boot; placar cliente×servidor</p>
-        <p class="val"><span data-i18n="up_validation">Validation:</span> BootTest 21 verificações OK (`Saved/Logs/AS2D_BootTest_Summary.txt`)</p>
-      </article>
-      <article class="upd-item">
-        <div class="upd-meta"><span>Build 1350</span><span>01/11 13:51:50</span><span>0.9.0</span><span>Claude</span></div>
-        <p>slide reativado (CVar 1); input Ctrl-only (S removido); ServerLauncher único; menu JOGAR ONLINE/TREINO OFFLINE/SAIR</p>
-        <p class="val"><span data-i18n="up_validation">Validation:</span> usuário validou cliente+servidor; MenuServer OK</p>
-      </article>
-      <article class="upd-item">
-        <div class="upd-meta"><span>Build 1253</span><span>01/11 12:55:33</span><span>0.8.3</span><span>Claude</span></div>
-        <p>slide desligado (`AS2D.Slide.Enabled` padrão 0), crouch mantido</p>
-        <p class="val"><span data-i18n="up_validation">Validation:</span> MenuServer: offline/online/2 joins/2-5/0 erros</p>
+        <div class="upd-meta"><span>2026-11-01</span><span class="upd-tag">update</span><span>#1708</span></div>
+        <div data-lang-block="en">
+          <h3>New HUD and country flags</h3>
+          <ul><li>The player HUD is here: health and your identity on the left, weapon slots 1 and 2 on the right.</li><li>Pick your country in the menu and your flag shows up in the match and on the scoreboard.</li><li>The official server got lighter and smoother to run.</li></ul>
+        </div>
+        <div data-lang-block="pt" hidden>
+          <h3>Novo HUD e bandeiras de país</h3>
+          <ul><li>O HUD do jogador chegou: vida e sua identidade à esquerda, slots de arma 1 e 2 à direita.</li><li>Escolha seu país no menu e sua bandeira aparece na partida e no placar.</li><li>O servidor oficial ficou mais leve e estável.</li></ul>
+        </div>
+        <div data-lang-block="es" hidden>
+          <h3>Nuevo HUD y banderas de país</h3>
+          <ul><li>Llegó el HUD del jugador: vida e identidad a la izquierda, slots de arma 1 y 2 a la derecha.</li><li>Elige tu país en el menú y tu bandera aparece en la partida y en el marcador.</li><li>El servidor oficial quedó más ligero y estable.</li></ul>
+        </div>
       </article></div>
-
-  <h2 class="section-title" data-i18n="up_log">Development log</h2>
-  <div class="upd-list">
-      <article class="upd-item">
-        <div class="upd-meta"><span>v0.9.21</span><span>01/11 18:00</span><span>docs</span><span>DeepSeek</span></div>
-        <h3>Site vira estatico: sem login/GDD, landing + Updates gerado dos docs, CTA Be a playtester (Discord), repo git em public/ e servidor estatico local/tunel</h3>
-        <p class="val"><span data-i18n="up_validation">Validation:</span> paginas 200 (index/updates/assets); updates gerado (5 builds, 10 versoes); git commit 13 arquivos; sem autenticacao</p>
-      </article>
-      <article class="upd-item">
-        <div class="upd-meta"><span>v0.9.20</span><span>01/11 17:39</span><span>build</span><span>DeepSeek</span></div>
-        <h3>Corrige o atalho do tunel: Tunnel.bat gravado com LF nao rodava no cmd; regravado em CRLF e o atalho do Desktop aponta direto para o PowerShell</h3>
-        <p class="val"><span data-i18n="up_validation">Validation:</span> Tunnel.bat testado (URL gerada, / 200, /login 200, /gdd/ 303); atalho equivalente testado e deixado ativo; verify_docs OK</p>
-      </article>
-      <article class="upd-item">
-        <div class="upd-meta"><span>v0.9.19</span><span>01/11 17:35</span><span>docs</span><span>DeepSeek</span></div>
-        <h3>Tunel temporario do site (Cloudflare Quick Tunnel + atalho no Desktop), GDD com pagina Builds e changelog (5+5) e README/AGENTS atualizados</h3>
-        <p class="val"><span data-i18n="up_validation">Validation:</span> tunel publico testado: / 200, /login 200, /gdd/ 303; GDD com 10 secoes; atalho criado; verify_docs OK</p>
-      </article>
-      <article class="upd-item">
-        <div class="upd-meta"><span>v0.9.18</span><span>01/11 17:29</span><span>build</span><span>DeepSeek</span></div>
-        <h3>Retencao padrao de builds passa a 6 (bat, prune, AGENTS, Architecture 07, BUILDS); anuncio da 1708 publicado e fixado no #game-updates (EN)</h3>
-        <p class="val"><span data-i18n="up_validation">Validation:</span> prune dry-run coerente; Word regenerado; verify_docs OK; anuncio publicado id 1566549768153342065</p>
-      </article>
-      <article class="upd-item">
-        <div class="upd-meta"><span>v0.9.17</span><span>01/11 17:24</span><span>docs</span><span>DeepSeek</span></div>
-        <h3>Hospedagem no Planning §5 (requisitos de VPS e medir capacidade/estabilidade antes de contratar) + fechamento da seção com 0.9.14-0.9.16 e build 1708</h3>
-        <p class="val"><span data-i18n="up_validation">Validation:</span> Planning e handoff atualizados; Word regenerado; verify_docs OK; sem codigo tocado</p>
-      </article>
-      <article class="upd-item">
-        <div class="upd-meta"><span>v0.9.16</span><span>01/11 17:17</span><span>fix</span><span>Codex</span></div>
-        <h3>Aplica tick de 60 Hz nos launchers do servidor via ExecCmds; oficial reiniciado e validado com 5 bots/2 clientes</h3>
-        <p class="val"><span data-i18n="up_validation">Validation:</span> Console: 5 amostras a 60; oficial: 10 amostras sem jogadores e 30 com 2 clientes, todas a 60 após aquecimento; CPU 16,47%-&gt;2,55% idle; beacon online/0 jogadores após saída; só scripts, sem compilação/pacote novo</p>
-      </article>
-      <article class="upd-item">
-        <div class="upd-meta"><span>v0.9.15</span><span>01/11 17:12</span><span>build</span><span>Codex</span></div>
-        <h3>Atualiza oficial e clientes para build 1708; valida país/bandeira no pacote; registra atualização do oficial como regra permanente</h3>
-        <p class="val"><span data-i18n="up_validation">Validation:</span> Editor e jogo Win64 Development/cook OK; cliques reais offline Brazil, oficial com 2 clientes Brazil/United Kingdom, HUD/placar corretos e F10 restaura; sem fatal; pendentes tick60/foco UI/WAN</p>
-      </article>
-      <article class="upd-item">
-        <div class="upd-meta"><span>v0.9.14</span><span>01/11 17:06</span><span>fix</span><span>Codex</span></div>
-        <h3>País escolhido define bandeira no offline/servidor; menu restaura seleção; catálogo dos 196 países com 26 bandeiras complementares</h3>
-        <p class="val"><span data-i18n="up_validation">Validation:</span> AS2DEditor Win64 Development OK; CountryCatalog, ScoreboardAndBotIdentity e Profile.Offline/Server passaram (PIE servidor+2 clientes); oficial não atualizado</p>
-      </article>
-      <article class="upd-item">
-        <div class="upd-meta"><span>v0.9.13</span><span>01/11 17:01</span><span>docs</span><span>DeepSeek</span></div>
-        <h3>Site revisado: textos defasados de 01/02/07/09, README e landing atualizados; sync lê hub + Architecture; gate valida os caminhos do `gdd.config.json`. Anúncio de build no Discord via `Discord/post_update.py` (dry-run testado)</h3>
-        <p class="val"><span data-i18n="up_validation">Validation:</span> sync-gdd OK sem avisos; site 200/303 no smoke; post_update dry-run OK (nada publicado); verify_docs OK</p>
-      </article>
-      <article class="upd-item">
-        <div class="upd-meta"><span>v0.9.12</span><span>01/11 17:00</span><span>docs</span><span>Codex</span></div>
-        <h3>Registra aprovação manual do HUD pelo usuário e encerra pendência de validação visual local</h3>
-        <p class="val"><span data-i18n="up_validation">Validation:</span> Confirmação do usuário em 01/11/2026; sem nova compilação/teste; ambiente e casos não detalhados</p>
-      </article></div>
-
-  <p class="upd-note" data-i18n="up_note">Generated automatically from the project docs. Technical notes are kept in Portuguese.</p>
+  <p class="upd-note" data-i18n="up_note">Only the latest updates are listed here. Technical details stay with the development team.</p>
 </main>
 
 <footer class="footer">

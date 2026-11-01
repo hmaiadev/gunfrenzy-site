@@ -53,9 +53,9 @@
       foot_note: 'Game in development. Made with Unreal Engine 5.8. All content subject to change.',
       foot_rights: '© 2026 Gun Frenzy', foot_updates: 'Updates', foot_discord: 'Discord',
       up_title: 'Updates — Gun Frenzy', up_h1: 'What changed in the arena',
-      up_intro: 'Packaged builds and development versions, published here with every release. Want to test before everyone else? Join the Discord.',
+      up_intro: 'What was added and fixed, in plain language. Want to test before everyone else?',
       up_builds: 'Latest builds', up_log: 'Development log', up_validation: 'Validation:',
-      up_note: 'Generated automatically from the project docs. Technical notes are kept in Portuguese.',
+      up_note: 'Only the latest updates are listed here. Technical details stay with the development team.', up_empty: 'No updates yet. Check back soon.',
       up_empty_b: 'No builds recorded yet.', up_empty_v: 'No versions recorded yet.', up_back: 'Home'
     },
 
@@ -107,9 +107,9 @@
       foot_note: 'Jogo em desenvolvimento. Feito com Unreal Engine 5.8. Todo conteúdo sujeito a mudanças.',
       foot_rights: '© 2026 Gun Frenzy', foot_updates: 'Updates', foot_discord: 'Discord',
       up_title: 'Updates — Gun Frenzy', up_h1: 'O que mudou na arena',
-      up_intro: 'Builds empacotadas e versões de desenvolvimento, publicadas aqui a cada entrega. Quer testar antes de todo mundo? Entre no Discord.',
+      up_intro: 'O que foi adicionado e corrigido, em linguagem simples. Quer testar antes de todo mundo?',
       up_builds: 'Últimas builds', up_log: 'Diário de desenvolvimento', up_validation: 'Validação:',
-      up_note: 'Gerado automaticamente dos documentos do projeto. As notas técnicas ficam em português.',
+      up_note: 'Só as atualizações mais recentes aparecem aqui. Os detalhes técnicos ficam com a equipe.', up_empty: 'Nenhuma atualização ainda. Volte em breve.',
       up_empty_b: 'Nenhuma build registrada ainda.', up_empty_v: 'Nenhuma versão registrada ainda.', up_back: 'Início'
     },
 
@@ -161,9 +161,9 @@
       foot_note: 'Juego en desarrollo. Hecho con Unreal Engine 5.8. Todo el contenido puede cambiar.',
       foot_rights: '© 2026 Gun Frenzy', foot_updates: 'Novedades', foot_discord: 'Discord',
       up_title: 'Novedades — Gun Frenzy', up_h1: 'Qué cambió en la arena',
-      up_intro: 'Builds empaquetadas y versiones de desarrollo, publicadas aquí en cada entrega. ¿Quieres probar antes que nadie? Entra al Discord.',
+      up_intro: 'Qué se agregó y corrigió, en lenguaje simple. ¿Quieres probar antes que nadie?',
       up_builds: 'Últimas builds', up_log: 'Diario de desarrollo', up_validation: 'Validación:',
-      up_note: 'Generado automáticamente de los documentos del proyecto. Las notas técnicas se mantienen en portugués.',
+      up_note: 'Aquí solo aparecen las actualizaciones más recientes. Los detalles técnicos quedan con el equipo.', up_empty: 'Aún no hay actualizaciones. Vuelve pronto.',
       up_empty_b: 'Aún no hay builds registradas.', up_empty_v: 'Aún no hay versiones registradas.', up_back: 'Inicio'
     }
   };
@@ -186,6 +186,9 @@
       if (attr) { el.setAttribute(attr, value); return; }
       if (el.tagName === 'META') { el.setAttribute('content', value); return; }
       el.innerHTML = value;
+    });
+    document.querySelectorAll('[data-lang-block]').forEach(function (el) {
+      el.hidden = el.getAttribute('data-lang-block') !== next;
     });
     document.title = dict.meta_title || I18N.en.meta_title;
     document.querySelectorAll('[data-lang]').forEach(function (btn) {
