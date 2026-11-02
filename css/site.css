@@ -98,7 +98,7 @@ section { scroll-margin-top: 72px; }
 .card h3 { font-size: 24px; margin-bottom: 10px; }
 .card p { color: var(--muted); font-size: 15.5px; margin: 0; }
 
-.weapons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.weapons { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
 .weapon { background: linear-gradient(160deg, #1b1e25, #121419); padding: 28px; clip-path: polygon(0 0, calc(100% - 26px) 0, 100% 26px, 100% 100%, 0 100%); position: relative; }
 .weapon header { margin-bottom: 14px; }
 .weapon h3 { font-size: 44px; }
@@ -113,6 +113,7 @@ section { scroll-margin-top: 72px; }
 .bars i { display: block; height: 100%; width: 0; background: var(--grad); transition: width 1s cubic-bezier(.2, .8, .2, 1); }
 .bars.on i[data-v="35"] { width: 35%; } .bars.on i[data-v="45"] { width: 45%; } .bars.on i[data-v="55"] { width: 55%; }
 .bars.on i[data-v="75"] { width: 75%; } .bars.on i[data-v="80"] { width: 80%; } .bars.on i[data-v="85"] { width: 85%; }
+.bars.on i[data-v="95"] { width: 95%; } .bars.on i[data-v="15"] { width: 15%; } .bars.on i[data-v="30"] { width: 30%; }
 
 .video-slot, .shot { position: relative; background: var(--panel); overflow: hidden; margin: 0; }
 .video-slot { aspect-ratio: 16 / 9; margin-bottom: 14px; }
