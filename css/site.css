@@ -1,17 +1,17 @@
 /* Gun Frenzy — landing page. Identity: graphite, acid lime, hot magenta, electric cyan (Marathon aesthetic). */
 :root {
-  --bg: #090a0d;
-  --bg-2: #0f1218;
-  --panel: #141720;
+  --bg: #0e0806;
+  --bg-2: #170d09;
+  --panel: #21130d;
   --line: rgba(255, 255, 255, .09);
-  --text: #f3f1ee;
-  --muted: #9fa4af;
-  --neon-lime: #b6ff00;
-  --neon-pink: #ff007a;
-  --neon-cyan: #00e5ff;
-  --fire: #b6ff00;
-  --fire-2: #ff007a;
-  --grad: linear-gradient(100deg, #ff007a 0%, #b6ff00 100%);
+  --text: #fff3e8;
+  --muted: #c2a593;
+  --ember: #ff7a1a;
+  --flame: #e2391e;
+  --gold: #ffb347;
+  --fire: #ff7a1a;
+  --fire-2: #e2391e;
+  --grad: linear-gradient(100deg, #e2391e 0%, #ff7a1a 55%, #ffb347 100%);
   --display: "Barlow Condensed", "Avenir Next Condensed", "Roboto Condensed", sans-serif-condensed, "Arial Narrow", "DejaVu Sans Condensed", sans-serif;
   --body: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
   --cut: 14px;
@@ -57,16 +57,16 @@ p { margin: 0 0 1em; }
   linear-gradient(90deg, rgba(11, 12, 15, .95) 0%, rgba(11, 12, 15, .75) 32%, rgba(11, 12, 15, .1) 65%),
   linear-gradient(0deg, var(--bg) 0%, rgba(11, 12, 15, 0) 35%); }
 .hero-copy { position: relative; max-width: 620px; width: 100%; margin: 0 auto 0 max(0px, calc((100vw - var(--max)) / 2 - var(--gutter))); }
-.kicker { display: inline-flex; align-items: center; gap: 10px; font: 700 14px/1 var(--display); letter-spacing: .16em; text-transform: uppercase; color: var(--fire-2); padding: 8px 14px; background: rgba(182, 255, 0, .10); border-left: 3px solid var(--neon-lime); color: var(--neon-lime); }
-.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--fire); box-shadow: 0 0 0 0 rgba(255, 0, 122, .7); animation: pulse 2s infinite; }
-@keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(255, 0, 122, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 75, 31, 0); } }
+.kicker { display: inline-flex; align-items: center; gap: 10px; font: 700 14px/1 var(--display); letter-spacing: .16em; text-transform: uppercase; color: var(--fire-2); padding: 8px 14px; background: rgba(255, 122, 26, .10); border-left: 3px solid var(--ember); color: var(--ember); }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--fire); box-shadow: 0 0 0 0 rgba(226, 57, 30, .7); animation: pulse 2s infinite; }
+@keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(226, 57, 30, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 75, 31, 0); } }
 .hero h1 { font-size: clamp(48px, 6vw, 88px); margin: 22px 0 18px; }
 .hero h1 em { font-style: italic; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; padding-right: .08em; }
 .lede { font-size: clamp(17px, 1.6vw, 20px); color: #d6d4d1; max-width: 520px; }
 .cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
 .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; text-decoration: none; font: italic 800 19px/1 var(--display); text-transform: uppercase; letter-spacing: .06em; clip-path: polygon(var(--cut) 0, 100% 0, calc(100% - var(--cut)) 100%, 0 100%); transition: transform .15s, filter .15s; }
 .btn:hover { transform: translateY(-2px); filter: brightness(1.08); }
-.btn-primary { background: var(--grad); color: #090a0d; font-weight: 900; }
+.btn-primary { background: var(--grad); color: #1a0d08; font-weight: 900; }
 .btn-ghost { background: rgba(255, 255, 255, .08); color: var(--text); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .2); }
 
 /* ---------- SECTIONS ---------- */
@@ -124,7 +124,7 @@ section { scroll-margin-top: 72px; }
 .shots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .shot { aspect-ratio: 16 / 10; }
 .placeholder { position: absolute; inset: 0; display: grid; place-items: center; background:
-  linear-gradient(135deg, rgba(182, 255, 0, .08), transparent 60%),
+  linear-gradient(135deg, rgba(255, 122, 26, .08), transparent 60%),
   repeating-linear-gradient(90deg, rgba(255, 255, 255, .03) 0 1px, transparent 1px 48px),
   repeating-linear-gradient(0deg, rgba(255, 255, 255, .03) 0 1px, transparent 1px 48px); border: 1px dashed rgba(255, 255, 255, .14); }
 .placeholder span { font: 700 14px/1 var(--display); letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
@@ -135,7 +135,7 @@ section { scroll-margin-top: 72px; }
 .timeline b { display: block; font: italic 800 22px/1.05 var(--display); text-transform: uppercase; margin-bottom: 8px; }
 .timeline span { color: var(--muted); font-size: 15px; }
 .timeline li.done::before { color: var(--fire); content: "✓"; }
-.timeline li.now { background: linear-gradient(160deg, rgba(182, 255, 0, .14), var(--panel) 70%); box-shadow: inset 0 3px 0 var(--neon-lime); }
+.timeline li.now { background: linear-gradient(160deg, rgba(255, 122, 26, .14), var(--panel) 70%); box-shadow: inset 0 3px 0 var(--ember); }
 .timeline li.now::before { color: var(--fire-2); content: "● Agora"; font-size: 15px; letter-spacing: .14em; font-style: normal; line-height: 32px; }
 
 .footer { max-width: var(--max); margin: clamp(64px, 10vw, 120px) auto 0; padding: 32px var(--gutter) calc(32px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; }
