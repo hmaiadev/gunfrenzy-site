@@ -137,8 +137,8 @@
       </article>
       <article class="card">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7V3Z"/></svg>
-        <h3 data-i18n="m5t">Health &amp; ammo</h3>
-        <p data-i18n="m5d">Floating health and ammo pickups respawn at fixed points. Controlling them decides matches.</p>
+        <h3 data-i18n="m5t">Health &amp; weapons</h3>
+        <p data-i18n="m5d">Health pickups respawn at fixed points and weapons lie around the arena. No loose ammo: run dry, find another gun.</p>
       </article>
       <article class="card">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2h6v3h3a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-1v4h-2v-4H9v4H7v-4H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h3V2Zm0 8a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm6 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"/></svg>
@@ -164,7 +164,7 @@
     <h2 class="section-title" data-i18n="ars_title">Pick your rate of fire</h2>
     <div class="weapons">
       <article class="weapon">
-        <header><span class="tag" data-i18n="w1tag">Slot 1</span><h3 data-i18n="w1name">Pistol</h3></header>
+        <header><span class="tag" data-i18n="w1tag">Sidearm</span><h3 data-i18n="w1name">Pistol</h3></header>
         <p data-i18n="w1desc">Semi-automatic, accurate and reliable. One click, one shot: perfect for hitting in the air.</p>
         <dl class="bars">
           <div><dt data-i18n="bar_damage">Damage per shot</dt><dd><i data-v="80"></i></dd></div>
@@ -174,7 +174,7 @@
         </dl>
       </article>
       <article class="weapon">
-        <header><span class="tag" data-i18n="w2tag">Slot 2</span><h3 data-i18n="w2name">Rifle</h3></header>
+        <header><span class="tag" data-i18n="w2tag">Main weapon</span><h3 data-i18n="w2name">Rifle</h3></header>
         <p data-i18n="w2desc">Automatic with a long magazine. Hold the trigger and control the recoil to own mid-range.</p>
         <dl class="bars">
           <div><dt data-i18n="bar_damage">Damage per shot</dt><dd><i data-v="45"></i></dd></div>
@@ -184,7 +184,7 @@
         </dl>
       </article>
       <article class="weapon">
-        <header><span class="tag" data-i18n="w3tag">Slot 3</span><h3 data-i18n="w3name">Shotgun</h3></header>
+        <header><span class="tag" data-i18n="w3tag">Main weapon</span><h3 data-i18n="w3name">Shotgun</h3></header>
         <p data-i18n="w3desc">Eight pellets per shell and a heavy kick. Up close one shot ends the fight — reload before you need it.</p>
         <dl class="bars">
           <div><dt data-i18n="bar_damage">Damage per shot</dt><dd><i data-v="95"></i></dd></div>
@@ -193,9 +193,35 @@
           <div><dt data-i18n="bar_control">Control</dt><dd><i data-v="30"></i></dd></div>
         </dl>
       </article>
-      <article class="weapon weapon-soon">
-        <header><span class="tag" data-i18n="wstag">Coming soon</span><h3 data-i18n="wsname">New weapons</h3></header>
-        <p data-i18n="wsdesc">The arsenal was built to grow. New weapons enter testing in upcoming versions.</p>
+      <article class="weapon">
+        <header><span class="tag" data-i18n="w4tag">Main weapon</span><h3 data-i18n="w4name">SMG</h3></header>
+        <p data-i18n="w4desc">The Pulso SM-09: a storm of bullets up close. Shreds at short range, falls off fast at distance.</p>
+        <dl class="bars">
+          <div><dt data-i18n="bar_damage">Damage per shot</dt><dd><i data-v="35"></i></dd></div>
+          <div><dt data-i18n="bar_rate">Fire rate</dt><dd><i data-v="95"></i></dd></div>
+          <div><dt data-i18n="bar_mag">Magazine</dt><dd><i data-v="70"></i></dd></div>
+          <div><dt data-i18n="bar_control">Control</dt><dd><i data-v="65"></i></dd></div>
+        </dl>
+      </article>
+      <article class="weapon">
+        <header><span class="tag" data-i18n="w5tag">Found on the map</span><h3 data-i18n="w5name">Sniper</h3></header>
+        <p data-i18n="w5desc">The Aratu SR-50: one heavy shot at a time. Crouch and push the cursor to the edge of the screen to see further.</p>
+        <dl class="bars">
+          <div><dt data-i18n="bar_damage">Damage per shot</dt><dd><i data-v="100"></i></dd></div>
+          <div><dt data-i18n="bar_rate">Fire rate</dt><dd><i data-v="10"></i></dd></div>
+          <div><dt data-i18n="bar_mag">Magazine</dt><dd><i data-v="15"></i></dd></div>
+          <div><dt data-i18n="bar_control">Control</dt><dd><i data-v="35"></i></dd></div>
+        </dl>
+      </article>
+      <article class="weapon">
+        <header><span class="tag" data-i18n="w6tag">Found on the map</span><h3 data-i18n="w6name">Knife</h3></header>
+        <p data-i18n="w6desc">Stab with melee or throw it with fire. A miss leaves it on the floor — go get it back.</p>
+        <dl class="bars">
+          <div><dt data-i18n="bar_damage">Damage per shot</dt><dd><i data-v="90"></i></dd></div>
+          <div><dt data-i18n="bar_rate">Fire rate</dt><dd><i data-v="30"></i></dd></div>
+          <div><dt data-i18n="bar_mag">Magazine</dt><dd><i data-v="5"></i></dd></div>
+          <div><dt data-i18n="bar_control">Control</dt><dd><i data-v="60"></i></dd></div>
+        </dl>
       </article>
     </div>
   </section>

@@ -101,7 +101,7 @@ section { scroll-margin-top: 72px; }
 .card h3 { font-size: 24px; margin-bottom: 10px; }
 .card p { color: var(--muted); font-size: 15.5px; margin: 0; }
 
-.weapons { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.weapons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .weapon { background: linear-gradient(160deg, #1b1e25, #121419); padding: 28px; clip-path: polygon(0 0, calc(100% - 26px) 0, 100% 26px, 100% 100%, 0 100%); position: relative; }
 .weapon header { margin-bottom: 14px; }
 .weapon h3 { font-size: 44px; }
