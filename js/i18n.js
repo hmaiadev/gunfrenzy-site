@@ -1,6 +1,6 @@
-/* Gun Frenzy — i18n (EN default, PT-BR, ES). Sem dependências.
+/* Gun Frenzy — i18n (EN default, PT-BR, ES, ZH, JA). Sem dependências.
    Uso: elemento com data-i18n="chave". data-i18n-attr="content" altera atributo.
-   Idioma: ?lang=pt|es|en ou localStorage.gf_lang. */
+   Idioma: ?lang=pt|es|zh|ja|en ou localStorage.gf_lang. */
 (function () {
   'use strict';
 
@@ -177,10 +177,56 @@
       up_builds: 'Últimas builds', up_log: 'Diario de desarrollo', up_validation: 'Validación:',
       up_note: 'Aquí solo aparecen las actualizaciones más recientes. Los detalles técnicos quedan con el equipo.', up_empty: 'Aún no hay actualizaciones. Vuelve pronto.',
       up_empty_b: 'Aún no hay builds registradas.', up_empty_v: 'Aún no hay versiones registradas.', up_back: 'Inicio'
+    },
+
+    zh: {
+      meta_title: 'Gun Frenzy — 2D 多人竞技射击游戏',
+      meta_desc: 'Gun Frenzy 是一款 2D 多人竞技射击游戏，拥有爆炸性的移动、真实弹道射击和快节奏对局。使用虚幻引擎 5.8 开发中。',
+      lang_aria: '语言',
+      nav_gameplay: '游戏画面', nav_updates: '更新',
+      hero_kicker: '开发中 · PC',
+      hero_title: '踏入竞技场。<br><em>成为传奇。</em>',
+      hero_lede: '一款 2D 多人竞技射击游戏，每一次跳跃、翻转和射击都至关重要。爆炸性的移动、真实弹道，与玩家和机器人展开快节奏对局。',
+      gp_eyebrow: '游戏画面', gp_title: '来自竞技场的实况', gp_trailer: '预告片制作中',
+      gp_shot: '截图', gp_soon: '即将推出',
+      pt_eyebrow: '测试', pt_title: '成为测试玩家',
+      pt_text: 'Windows PC，测试期间免费。下载启动器，放入单独的文件夹并打开：它会安装游戏并保持更新。',
+      pt_btn: '加入 Discord',
+      dl_btn: '下载 Windows 版', dl_note: '如果 Windows 显示警告，请点击“更多信息”，然后点击“仍要运行”。启动器尚未签名。',
+      foot_note: '游戏开发中。所有内容可能会有变动。',
+      foot_rights: '© 2026 Gun Frenzy', foot_updates: '更新', foot_discord: 'Discord',
+      up_title: '更新 — Gun Frenzy', up_h1: '竞技场有哪些变化',
+      up_intro: '新增和修复的内容，用简单的语言说明。想抢先测试吗？',
+      up_builds: '最新版本', up_log: '开发日志', up_validation: '验证：',
+      up_note: '这里只列出最新的更新。技术细节由开发团队保留。', up_empty: '暂无更新，请稍后再来。',
+      up_empty_b: '暂无版本记录。', up_empty_v: '暂无版本记录。', up_back: '首页'
+    },
+
+    ja: {
+      meta_title: 'Gun Frenzy — 2D マルチプレイヤー アリーナシューター',
+      meta_desc: 'Gun Frenzy は、爆発的な機動力、リアルな弾道の銃撃戦、スピーディーな試合が楽しめる 2D マルチプレイヤー アリーナシューターです。Unreal Engine 5.8 で開発中。',
+      lang_aria: '言語',
+      nav_gameplay: 'ゲームプレイ', nav_updates: 'アップデート',
+      hero_kicker: '開発中 · PC',
+      hero_title: 'アリーナへ踏み込め。<br><em>伝説となって去れ。</em>',
+      hero_lede: 'ジャンプ、宙返り、一発一発が勝負を決める 2D マルチプレイヤー アリーナシューター。爆発的な機動力とリアルな弾道で、プレイヤーやボットとスピーディーに戦おう。',
+      gp_eyebrow: 'ゲームプレイ', gp_title: 'アリーナから直送', gp_trailer: 'トレーラー制作中',
+      gp_shot: 'スクリーンショット', gp_soon: '近日公開',
+      pt_eyebrow: 'プレイテスト', pt_title: 'プレイテスターになろう',
+      pt_text: 'Windows PC 向け、テスト期間中は無料。ランチャーをダウンロードして専用フォルダに置き、起動してください。ゲームのインストールと更新を自動で行います。',
+      pt_btn: 'Discord に参加',
+      dl_btn: 'Windows 版をダウンロード', dl_note: 'Windows に警告が表示された場合は「詳細情報」→「実行」をクリックしてください。ランチャーはまだ署名されていません。',
+      foot_note: 'ゲームは開発中です。内容は変更される場合があります。',
+      foot_rights: '© 2026 Gun Frenzy', foot_updates: 'アップデート', foot_discord: 'Discord',
+      up_title: 'アップデート — Gun Frenzy', up_h1: 'アリーナの変更点',
+      up_intro: '追加・修正された内容をわかりやすく紹介します。いち早くテストしたい方は',
+      up_builds: '最新ビルド', up_log: '開発ログ', up_validation: '検証：',
+      up_note: 'ここには最新のアップデートのみ掲載しています。技術的な詳細は開発チームが管理しています。', up_empty: 'まだアップデートはありません。また後でチェックしてください。',
+      up_empty_b: 'ビルドの記録はまだありません。', up_empty_v: 'バージョンの記録はまだありません。', up_back: 'ホーム'
     }
   };
 
-  var SUPPORTED = ['en', 'pt', 'es'];
+  var SUPPORTED = ['en', 'pt', 'es', 'zh', 'ja'];
   var params = new URLSearchParams(window.location.search);
   var stored = null;
   try { stored = localStorage.getItem('gf_lang'); } catch (e) { /* modo privado */ }
@@ -189,7 +235,7 @@
 
   function apply(next) {
     var dict = I18N[next] || I18N.en;
-    document.documentElement.lang = next === 'pt' ? 'pt-BR' : next;
+    document.documentElement.lang = next === 'pt' ? 'pt-BR' : next === 'zh' ? 'zh-CN' : next;
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var key = el.getAttribute('data-i18n');
       var value = dict[key] != null ? dict[key] : I18N.en[key];

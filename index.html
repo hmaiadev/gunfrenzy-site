@@ -15,8 +15,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,700;1,800;1,900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/site.css?v=b2411">
-  <script src="js/i18n.js?v=b2411" defer></script>
+  <link rel="stylesheet" href="css/site.css?v=s1110">
+  <script src="js/i18n.js?v=s1110" defer></script>
   <script src="js/site.js" defer></script>
 </head>
 <body>
@@ -27,11 +27,7 @@
     <span>GUN<b>FRENZY</b></span>
   </a>
   <nav class="nav-links" aria-label="Sections">
-    <a href="#game" data-i18n="nav_game">The game</a>
-    <a href="#mecanicas" data-i18n="nav_mech">Mechanics</a>
-    <a href="#arsenal" data-i18n="nav_arsenal">Arsenal</a>
     <a href="#gameplay" data-i18n="nav_gameplay">Gameplay</a>
-    <a href="#status" data-i18n="nav_status">Status</a>
     <a href="updates.html" data-i18n="nav_updates">Updates</a>
   </nav>
   <div class="lang" role="group" aria-label="Language">
@@ -44,11 +40,13 @@
     <button type="button" class="lang-btn" data-lang="es" aria-pressed="false" title="Español">
       <svg viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#AA151B"/><rect y="4" width="24" height="8" fill="#F1BF00"/></svg>
     </button>
+    <button type="button" class="lang-btn" data-lang="zh" aria-pressed="false" title="中文 (简体)">
+      <svg viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#EE1C25"/><path transform="translate(4 4) scale(2.4)" d="M0,-1 L0.588,0.809 L-0.951,-0.309 L0.951,-0.309 L-0.588,0.809Z" fill="#FFFF00"/><g fill="#FFFF00"><path transform="translate(8 1.6) scale(.8)" d="M0,-1 L0.588,0.809 L-0.951,-0.309 L0.951,-0.309 L-0.588,0.809Z"/><path transform="translate(9.6 3.2) scale(.8)" d="M0,-1 L0.588,0.809 L-0.951,-0.309 L0.951,-0.309 L-0.588,0.809Z"/><path transform="translate(9.6 5.6) scale(.8)" d="M0,-1 L0.588,0.809 L-0.951,-0.309 L0.951,-0.309 L-0.588,0.809Z"/><path transform="translate(8 7.2) scale(.8)" d="M0,-1 L0.588,0.809 L-0.951,-0.309 L0.951,-0.309 L-0.588,0.809Z"/></g></svg>
+    </button>
+    <button type="button" class="lang-btn" data-lang="ja" aria-pressed="false" title="日本語">
+      <svg viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#fff"/><circle cx="12" cy="8" r="4.8" fill="#BC002D"/></svg>
+    </button>
   </div>
-  <a class="nav-dev" href="https://discord.gg/s9eRyuffNB" target="_blank" rel="noopener" title="Be a playtester on Discord">
-    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7L8 5Z"/></svg>
-    <span data-i18n="nav_playtest">Playtest</span>
-  </a>
 </header>
 
 <main>
@@ -66,163 +64,7 @@
       <p class="lede" data-i18n="hero_lede">A 2D multiplayer arena shooter where every jump, flip and shot counts. Explosive movement, real projectiles and fast matches against players and bots.</p>
       <div class="cta">
         <a class="btn btn-primary" href="https://github.com/hmaiadev/AS2D-Builds/releases/latest/download/AS2DLauncher.exe" data-i18n="dl_btn">Download for Windows</a>
-        <a class="btn btn-ghost" href="#mecanicas" data-i18n="hero_cta1">See mechanics</a>
-        <a class="btn btn-ghost" href="https://discord.gg/s9eRyuffNB" target="_blank" rel="noopener" data-i18n="hero_cta2">Be a playtester</a>
       </div>
-    </div>
-  </section>
-
-  <!-- PILLARS -->
-  <section class="pillars" id="game" aria-label="Game pillars">
-    <article>
-      <span class="num">01</span>
-      <h2 data-i18n="p1t">Explosive movement</h2>
-      <p data-i18n="p1d">Double jump, backflip, wall jump, crouch and slide. Cross the arena through the air, switch sides in half a second and escape over the shots.</p>
-    </article>
-    <article>
-      <span class="num">02</span>
-      <h2 data-i18n="p2t">Real gunplay</h2>
-      <p data-i18n="p2d">Every bullet is a physical projectile with speed, recoil and spread. Aim freely in 360° with mouse or stick.</p>
-    </article>
-    <article>
-      <span class="num">03</span>
-      <h2 data-i18n="p3t">Online arena</h2>
-      <p data-i18n="p3d">Authoritative server, scoreboard with flags and bots with different personalities filling the match.</p>
-    </article>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about">
-    <div class="about-text">
-      <p class="eyebrow" data-i18n="about_eyebrow">The game</p>
-      <h2 class="section-title" data-i18n="about_title">Side-view action, nonstop combat</h2>
-      <p data-i18n="about_p1">Gun Frenzy puts every fighter on the same battle plane, seen from the side, in 3D arenas with a perspective camera. Reading the fight is as simple as a 2D classic — left, right, up — but the action has the depth and weight of a modern shooter.</p>
-      <p data-i18n="about_p2">Inspired by Soldat and Worms Rumble, the focus is the fast duel: reach the ammo first, gain height, read your opponent and land the shot mid-air.</p>
-      <ul class="facts">
-        <li><b data-i18n="f_genre">Genre</b><span data-i18n="f_genre_v">2D multiplayer arena shooter</span></li>
-        <li><b data-i18n="f_platform">Platform</b><span data-i18n="f_platform_v">PC (Windows)</span></li>
-        <li><b data-i18n="f_controls">Controls</b><span data-i18n="f_controls_v">Keyboard &amp; mouse · Gamepad</span></li>
-        <li><b data-i18n="f_engine">Engine</b><span data-i18n="f_engine_v">Unreal Engine 5.8</span></li>
-      </ul>
-    </div>
-    <div class="about-card">
-      <img src="assets/icon-512.png?v=m3" alt="Gun Frenzy emblem" width="512" height="512" loading="lazy">
-    </div>
-  </section>
-
-  <!-- MECHANICS -->
-  <section class="mechanics" id="mecanicas">
-    <p class="eyebrow" data-i18n="mech_eyebrow">Mechanics</p>
-    <h2 class="section-title" data-i18n="mech_title">Everything that happens in the arena</h2>
-    <div class="grid">
-      <article class="card">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l4 5h-3v5h-2V8H8l4-5Zm-6 12h12v2H6v-2Zm2 4h8v2H8v-2Z"/></svg>
-        <h3 data-i18n="m1t">Double jump &amp; backflip</h3>
-        <p data-i18n="m1d">The second jump can become a backflip: jump against your aim and spin backwards to gain distance.</p>
-      </article>
-      <article class="card">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h3v18H3V3Zm6 9 7-7v4h5v6h-5v4l-7-7Z"/></svg>
-        <h3 data-i18n="m2t">Wall jump</h3>
-        <p data-i18n="m2d">Touching a wall turns it into a springboard. The sideways impulse takes priority and changes the vertical fight.</p>
-      </article>
-      <article class="card">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 2h2v4.07A6 6 0 0 1 17.93 11H22v2h-4.07A6 6 0 0 1 13 17.93V22h-2v-4.07A6 6 0 0 1 6.07 13H2v-2h4.07A6 6 0 0 1 11 6.07V2Zm1 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm0 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>
-        <h3 data-i18n="m3t">360° aim</h3>
-        <p data-i18n="m3d">The character follows the cursor: torso and head track the aim while the legs keep running.</p>
-      </article>
-      <article class="card">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h7a3 3 0 0 1 3 3v2h1a2 2 0 0 1 2 2v4a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V7a3 3 0 0 1 3-3Z"/></svg>
-        <h3 data-i18n="m4t">Crouch &amp; slide</h3>
-        <p data-i18n="m4d">Crouch for cover or slide keeping your momentum — and leave the slide in a jump that preserves speed.</p>
-      </article>
-      <article class="card">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7V3Z"/></svg>
-        <h3 data-i18n="m5t">Health &amp; weapons</h3>
-        <p data-i18n="m5d">Health pickups respawn at fixed points and weapons lie around the arena. No loose ammo: run dry, find another gun.</p>
-      </article>
-      <article class="card">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2h6v3h3a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-1v4h-2v-4H9v4H7v-4H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h3V2Zm0 8a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm6 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"/></svg>
-        <h3 data-i18n="m6t">Bots with personality</h3>
-        <p data-i18n="m6d">Defensive, balanced or aggressive: each bot has its own distance, aim and reaction time — and fights other bots too.</p>
-      </article>
-      <article class="card">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h2v18H4V3Zm4 1h11l-2.5 4L19 12H8V4Z"/></svg>
-        <h3 data-i18n="m7t">Scoreboard with flags</h3>
-        <p data-i18n="m7d">Kills and deaths for everyone on screen, with each fighter's name and flag. Bots keep their identity for the whole match.</p>
-      </article>
-      <article class="card">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10l-1 6h3l-8 14 1-9H8L7 2Z"/></svg>
-        <h3 data-i18n="m8t">Ragdoll</h3>
-        <p data-i18n="m8d">When someone falls, they really fall: the body inherits the last velocity and collapses with physics.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- ARSENAL -->
-  <section class="arsenal" id="arsenal">
-    <p class="eyebrow" data-i18n="ars_eyebrow">Arsenal</p>
-    <h2 class="section-title" data-i18n="ars_title">Pick your rate of fire</h2>
-    <div class="weapons">
-      <article class="weapon">
-        <header><span class="tag" data-i18n="w1tag">Sidearm</span><h3 data-i18n="w1name">Pistol</h3></header>
-        <p data-i18n="w1desc">Semi-automatic, accurate and reliable. One click, one shot: perfect for hitting in the air.</p>
-        <dl class="bars">
-          <div><dt data-i18n="bar_damage">Damage per shot</dt><dd><i data-v="80"></i></dd></div>
-          <div><dt data-i18n="bar_rate">Fire rate</dt><dd><i data-v="45"></i></dd></div>
-          <div><dt data-i18n="bar_mag">Magazine</dt><dd><i data-v="35"></i></dd></div>
-          <div><dt data-i18n="bar_control">Control</dt><dd><i data-v="75"></i></dd></div>
-        </dl>
-      </article>
-      <article class="weapon">
-        <header><span class="tag" data-i18n="w2tag">Main weapon</span><h3 data-i18n="w2name">Rifle</h3></header>
-        <p data-i18n="w2desc">Automatic with a long magazine. Hold the trigger and control the recoil to own mid-range.</p>
-        <dl class="bars">
-          <div><dt data-i18n="bar_damage">Damage per shot</dt><dd><i data-v="45"></i></dd></div>
-          <div><dt data-i18n="bar_rate">Fire rate</dt><dd><i data-v="85"></i></dd></div>
-          <div><dt data-i18n="bar_mag">Magazine</dt><dd><i data-v="85"></i></dd></div>
-          <div><dt data-i18n="bar_control">Control</dt><dd><i data-v="55"></i></dd></div>
-        </dl>
-      </article>
-      <article class="weapon">
-        <header><span class="tag" data-i18n="w3tag">Main weapon</span><h3 data-i18n="w3name">Shotgun</h3></header>
-        <p data-i18n="w3desc">Eight pellets per shell and a heavy kick. Up close one shot ends the fight — reload before you need it.</p>
-        <dl class="bars">
-          <div><dt data-i18n="bar_damage">Damage per shot</dt><dd><i data-v="95"></i></dd></div>
-          <div><dt data-i18n="bar_rate">Fire rate</dt><dd><i data-v="15"></i></dd></div>
-          <div><dt data-i18n="bar_mag">Magazine</dt><dd><i data-v="15"></i></dd></div>
-          <div><dt data-i18n="bar_control">Control</dt><dd><i data-v="30"></i></dd></div>
-        </dl>
-      </article>
-      <article class="weapon">
-        <header><span class="tag" data-i18n="w4tag">Main weapon</span><h3 data-i18n="w4name">SMG</h3></header>
-        <p data-i18n="w4desc">The Pulso SM-09: a storm of bullets up close. Shreds at short range, falls off fast at distance.</p>
-        <dl class="bars">
-          <div><dt data-i18n="bar_damage">Damage per shot</dt><dd><i data-v="35"></i></dd></div>
-          <div><dt data-i18n="bar_rate">Fire rate</dt><dd><i data-v="95"></i></dd></div>
-          <div><dt data-i18n="bar_mag">Magazine</dt><dd><i data-v="70"></i></dd></div>
-          <div><dt data-i18n="bar_control">Control</dt><dd><i data-v="65"></i></dd></div>
-        </dl>
-      </article>
-      <article class="weapon">
-        <header><span class="tag" data-i18n="w5tag">Found on the map</span><h3 data-i18n="w5name">Sniper</h3></header>
-        <p data-i18n="w5desc">The Aratu SR-50: one heavy shot at a time. Crouch and push the cursor to the edge of the screen to see further.</p>
-        <dl class="bars">
-          <div><dt data-i18n="bar_damage">Damage per shot</dt><dd><i data-v="100"></i></dd></div>
-          <div><dt data-i18n="bar_rate">Fire rate</dt><dd><i data-v="10"></i></dd></div>
-          <div><dt data-i18n="bar_mag">Magazine</dt><dd><i data-v="15"></i></dd></div>
-          <div><dt data-i18n="bar_control">Control</dt><dd><i data-v="35"></i></dd></div>
-        </dl>
-      </article>
-      <article class="weapon">
-        <header><span class="tag" data-i18n="w6tag">Found on the map</span><h3 data-i18n="w6name">Knife</h3></header>
-        <p data-i18n="w6desc">Stab with melee or throw it with fire. A miss leaves it on the floor — go get it back.</p>
-        <dl class="bars">
-          <div><dt data-i18n="bar_damage">Damage per shot</dt><dd><i data-v="90"></i></dd></div>
-          <div><dt data-i18n="bar_rate">Fire rate</dt><dd><i data-v="30"></i></dd></div>
-          <div><dt data-i18n="bar_mag">Magazine</dt><dd><i data-v="5"></i></dd></div>
-          <div><dt data-i18n="bar_control">Control</dt><dd><i data-v="60"></i></dd></div>
-        </dl>
-      </article>
     </div>
   </section>
 
@@ -241,30 +83,14 @@
     </div>
   </section>
 
-  <!-- STATUS -->
-  <section class="status" id="status">
-    <p class="eyebrow" data-i18n="st_eyebrow">Status</p>
-    <h2 class="section-title" data-i18n="st_title">Development log</h2>
-    <ol class="timeline">
-      <li class="done"><b data-i18n="st1t">Core combat</b><span data-i18n="st1d">Movement, special jumps, free aim, projectile weapons and reload.</span></li>
-      <li class="done"><b data-i18n="st2t">Living arena</b><span data-i18n="st2d">Spawners, bot profiles, pickups, scoreboard and online/offline menu.</span></li>
-      <li class="done"><b data-i18n="st3t">Advanced mobility</b><span data-i18n="st3d">Crouch, slide and slide jump; HUD with health and weapon slots.</span></li>
-      <li class="now"><b data-i18n="st4t">Polish</b><span data-i18n="st4d">Audio, effects, weapon tuning and server stability.</span></li>
-      <li><b data-i18n="st5t">Online servers</b><span data-i18n="st5d">Internet tests and matches with more players.</span></li>
-    </ol>
-    <p class="small"><a href="updates.html" data-i18n="st_more">See all updates →</a></p>
-  </section>
-
   <!-- PLAYTEST CTA -->
   <section class="cta-band" id="playtest">
     <div>
       <p class="eyebrow" data-i18n="pt_eyebrow">Playtest</p>
       <h2 class="section-title" data-i18n="pt_title">Be a playtester</h2>
       <p data-i18n="pt_text">Windows PC, free during the tests. Download the launcher, put it in its own folder and open it: it installs the game and keeps it updated.</p>
-      <p class="small" data-i18n="dl_note">If Windows shows a warning, click More info and then Run anyway. The launcher is not signed yet.</p>
     </div>
     <div class="cta">
-      <a class="btn btn-primary" href="https://github.com/hmaiadev/AS2D-Builds/releases/latest/download/AS2DLauncher.exe" data-i18n="dl_btn">Download for Windows</a>
       <a class="btn btn-ghost" href="https://discord.gg/s9eRyuffNB" target="_blank" rel="noopener" data-i18n="pt_btn">Join Discord</a>
     </div>
   </section>
@@ -273,7 +99,7 @@
 <footer class="footer">
   <div class="footer-brand"><img src="assets/icon-192.png?v=m3" alt="" width="28" height="28"><span>GUN<b>FRENZY</b></span></div>
   <p data-i18n="foot_note">Game in development. All content subject to change.</p>
-  <p class="small"><span data-i18n="foot_rights">© 2026 Gun Frenzy</span> · <a href="updates.html" data-i18n="foot_updates">Updates</a> · <a href="https://discord.gg/s9eRyuffNB" target="_blank" rel="noopener" data-i18n="foot_discord">Discord</a></p>
+  <p class="small"><span data-i18n="foot_rights">© 2026 Gun Frenzy</span> · <a href="https://discord.gg/s9eRyuffNB" target="_blank" rel="noopener" data-i18n="foot_discord">Discord</a></p>
 </footer>
 
 </body>
